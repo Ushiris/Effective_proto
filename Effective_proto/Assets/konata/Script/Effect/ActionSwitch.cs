@@ -36,6 +36,9 @@ public class ActionSwitch : MonoBehaviour
             //パーティクルを生成
             obj = Instantiate(instantParticle, transform.position, transform.localRotation);
             Destroy(obj, lifeTime);
+
+            //SE
+            SE_Manager.SePlay(SE_Manager.SE_NAME.Magic);
         }
     }
 

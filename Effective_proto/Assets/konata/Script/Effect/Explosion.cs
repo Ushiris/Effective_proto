@@ -37,6 +37,10 @@ public class Explosion : MonoBehaviour
                 Instantiate(particleArr[i], transform);
             }
             on = true;
+
+            //SE
+            SE_Manager.SePlay(SE_Manager.SE_NAME.Explosion);
+            SE_Manager.SePlay(SE_Manager.SE_NAME.Debris);
         }
     }
 }

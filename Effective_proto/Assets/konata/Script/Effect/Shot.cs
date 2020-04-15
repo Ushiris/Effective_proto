@@ -33,6 +33,9 @@ public class Shot : MonoBehaviour
     void Move()
     {
         on = true;
+
+        //SE
+        SE_Manager.SePlay(SE_Manager.SE_NAME.Fire);
     }
 
     //物に触れた時爆発パーティクル制御を生成する
