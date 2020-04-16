@@ -6,6 +6,11 @@ public class EffectBox : MonoBehaviour
 {
     List<string> box;
 
+    private void Awake()
+    {
+        box = new List<string>();
+    }
+
     public void AddEffect(string effect_name)
     {
         box.Add(effect_name);

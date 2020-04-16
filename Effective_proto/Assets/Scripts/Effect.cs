@@ -16,6 +16,8 @@ public class Effect : MonoBehaviour
             }
 
             box.AddEffect(gameObject.GetComponent<TextMeshPro>().text);
+
+            Destroy(gameObject);
         }
     }
 }
