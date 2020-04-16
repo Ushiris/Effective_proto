@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class EffectGenerator : MonoBehaviour
 {
-    [SerializeField]
-    string effect_name = "undifined";
+    [SerializeField, TextArea(1,3)]
+    string effect_name;
     [SerializeField]
     GameObject effect_base;
     [SerializeField]
