@@ -5,19 +5,13 @@ using UnityEngine;
 public class Rotate : MonoBehaviour
 {
     [SerializeField]
-    Vector3 axle = Vector3.up;
+    Vector3 axle = Vector3.up;  //回転の軸
     [SerializeField]
-    float speed = 0.6f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float speed = 90;           //一秒で傾く角度。
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(axle, speed);
+        transform.Rotate(axle, speed * Time.deltaTime);
     }
 }
