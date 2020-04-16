@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class EffectGenerator : MonoBehaviour
@@ -26,16 +25,12 @@ public class EffectGenerator : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public GameObject Spawn()
+    public void Spawn()
     {
         GameObject instance = Instantiate(effect_base,transform);
         instance.GetComponent<TextMeshPro>().text = effect_name;
-        return instance;
+        instance.name = "effect_" + effect_name;
+        transform.DetachChildren();
+        Destroy(gameObject);
     }
 }
