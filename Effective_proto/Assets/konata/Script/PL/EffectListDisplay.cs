@@ -25,6 +25,7 @@ public class EffectListDisplay : MonoBehaviour
         if (tmpBok != EffectBox.box.Count)
         {
             tmpBok = EffectBox.box.Count;
+            txt.text = "";
             for (int i = 0; i < EffectBox.box.Count; i++)
             {
                 txt.text += EffectBox.box[i] + "\n";
