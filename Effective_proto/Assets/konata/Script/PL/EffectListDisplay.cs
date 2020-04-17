@@ -30,6 +30,11 @@ public class EffectListDisplay : MonoBehaviour
             {
                 txt.text += EffectBox.box[i] + "\n";
             }
+
+            if (EffectBox.box.Count == 2)
+            {
+                txt.text += "\nアーツ取得";
+            }
         }
     }
 
