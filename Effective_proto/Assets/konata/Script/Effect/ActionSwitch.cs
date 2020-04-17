@@ -18,7 +18,7 @@ public class ActionSwitch : MonoBehaviour
 
     [SerializeField] GameObject instantParticle;
 
-    public static ActionSwitch GetActionSwitch;
+    public static ActionSwitch GetActionSwitch { private set; get; }
 
     GameObject obj;
 

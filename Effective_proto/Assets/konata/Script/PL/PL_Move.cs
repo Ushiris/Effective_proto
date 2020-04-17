@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// プレイヤーの移動
 /// </summary>
-public class PL : MonoBehaviour
+public class PL_Move : MonoBehaviour
 {
     Rigidbody rb;
     Vector3 move;
