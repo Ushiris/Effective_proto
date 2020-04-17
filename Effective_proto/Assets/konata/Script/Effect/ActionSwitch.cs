@@ -44,6 +44,6 @@ public class ActionSwitch : MonoBehaviour
 
     bool OnTrigger()
     {
-        return Input.GetKeyDown(KeyCode.Space);
+        return Input.GetKeyDown(KeyCode.Space) && EffectBox.box.Count == 2;
     }
 }
