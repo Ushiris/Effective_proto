@@ -43,8 +43,9 @@ public class Shot : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Instantiate(instantParticle, other.transform);
+            Instantiate(instantParticle, other.transform.position, new Quaternion());
             Destroy(gameObject);
+            
         }
     }
 }
