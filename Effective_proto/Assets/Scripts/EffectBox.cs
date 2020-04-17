@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EffectBox : MonoBehaviour
 {
-    List<string> box;
+    public static List<string> box { private set; get; }
 
     private void Awake()
     {
