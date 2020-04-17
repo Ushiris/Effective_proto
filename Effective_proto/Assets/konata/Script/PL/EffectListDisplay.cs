@@ -11,6 +11,7 @@ public class EffectListDisplay : MonoBehaviour
     [SerializeField] Text txt;
 
     List<string> nameList = new List<string>();
+    int tmpBok;
 
     // Start is called before the first frame update
     void Start()
@@ -21,30 +22,15 @@ public class EffectListDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag != "Nenmy")
+        if (tmpBok != EffectBox.box.Count)
         {
-            if (!nameList.Contains(other.name))
+            tmpBok = EffectBox.box.Count;
+            for (int i = 0; i < EffectBox.box.Count; i++)
             {
-                //リストに追加
-                nameList.Add(other.name);
-
-                //テキスト表示
-                txt.text = "";
-                for (int i = 0; i < nameList.Count; i++)
-                {
-                    txt.text += nameList[i] + "\n";
-                }
-
-                if (nameList.Count == 2)
-                {
-                    txt.text += "↓\n" + nameList[0] + "\n+\n" + nameList[1];
-                }
+                txt.text += EffectBox.box[i] + "\n";
             }
         }
     }
+
+  
 }
